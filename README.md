@@ -82,7 +82,7 @@ CI/CD
 
 W projekcie została skonfigurowana automatyzacja procesu CI z użyciem GitHub Actions.
 
-Workflow uruchamia się automatycznie po każdym pushu na gałąź MAIN.
+Workflow uruchamia się automatycznie po każdym pushu na gałąź MASTER.
 
 Proces CI wykonuje następujące kroki:
 
@@ -94,6 +94,28 @@ Proces CI wykonuje następujące kroki:
 Plik workflow znajduje się w:
 
 .github/workflows/ci.yml
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Azure Deployment
+
+API zostało wdrożone w chmurze Microsoft Azure przy użyciu Azure App Service.
+
+Publiczny adres API
+https://ecommerce-orders-api-patryk-cchzfebpbhfkcub2.westeurope-01.azurewebsites.net
+
+Swagger
+https://ecommerce-orders-api-patryk-cchzfebpbhfkcub2.westeurope-01.azurewebsites.net/swagger
+
+Wykorzystane usługi Azure
+- Azure App Service
+- GitHub Actions (CI/CD pipeline)
+
+Automatyczne wdrażanie
+Po każdym pushu do gałęzi MASTER GitHub Actions:
+1. Buduje projekt ASP.NET Core
+2. Publikuje aplikację
+3. Automatycznie wdraża ją do Azure App Service
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
