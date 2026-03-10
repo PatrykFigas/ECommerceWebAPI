@@ -76,5 +76,25 @@ POST /api/orders
 PUT /api/orders/{id}
 DELETE /api/orders/{id}
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CI/CD
+
+W projekcie została skonfigurowana automatyzacja procesu CI z użyciem GitHub Actions.
+
+Workflow uruchamia się automatycznie po każdym pushu na gałąź MAIN.
+
+Proces CI wykonuje następujące kroki:
+
+- pobranie kodu repozytorium
+- instalacja środowiska .NET 8
+- przywrócenie pakietów NuGet
+- budowanie aplikacji
+
+Plik workflow znajduje się w:
+
+.github/workflows/ci.yml
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Projekt wykonany jako zadanie rekrutacyjne.
