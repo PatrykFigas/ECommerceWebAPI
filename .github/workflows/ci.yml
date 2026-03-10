@@ -3,7 +3,7 @@ name: .NET Web API CI
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
