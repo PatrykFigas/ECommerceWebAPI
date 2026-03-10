@@ -24,13 +24,13 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Restore
-  run: dotnet restore WebAPI/WebAPI.csproj
+        run: dotnet restore WebAPI/WebAPI.csproj
 
-- name: Build
-  run: dotnet build WebAPI/WebAPI.csproj --configuration Release --no-restore
+      - name: Build
+        run: dotnet build WebAPI/WebAPI.csproj --configuration Release --no-restore
 
-- name: Publish
-  run: dotnet publish WebAPI/WebAPI.csproj --configuration Release --no-build --output ${{ env.PUBLISH_PATH }}
+      - name: Publish
+        run: dotnet publish WebAPI/WebAPI.csproj --configuration Release --no-build --output ${{ env.PUBLISH_PATH }}
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
