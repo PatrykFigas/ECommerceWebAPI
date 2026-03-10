@@ -82,7 +82,7 @@ CI/CD
 
 W projekcie została skonfigurowana automatyzacja procesu CI z użyciem GitHub Actions.
 
-Workflow uruchamia się automatycznie po każdym pushu na gałąź MAIN.
+Workflow uruchamia się automatycznie po każdym pushu na gałąź MASTER.
 
 Proces CI wykonuje następujące kroki:
 
