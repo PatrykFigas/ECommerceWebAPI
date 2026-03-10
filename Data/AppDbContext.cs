@@ -18,6 +18,10 @@ namespace WebAPI.Data
                 .HasMany(o => o.Products)
                 .WithMany(p => p.Orders)
                 .UsingEntity(j => j.ToTable("OrderProducts"));
+
+            modelBuilder.Entity<Product>()
+                .Property(p => p.Price)
+                .HasPrecision(18, 2);
         }
     }
 }
