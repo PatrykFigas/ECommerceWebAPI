@@ -10,7 +10,7 @@ Projekt został zrealizowany z użyciem:
 
 - ASP.NET Core Web API
 - Entity Framework Core
-- SQL Server (LocalDB)
+- SQLite
 - Swagger / OpenAPI
 - .NET 8
 
