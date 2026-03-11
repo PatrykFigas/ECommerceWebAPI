@@ -1,3 +1,5 @@
+![Build and Deploy](https://github.com/PatrykFigas/ECommerceWebAPI/actions/workflows/ci.yml/badge.svg)
+
 WEB API - ZARZĄDZANIE ZAMÓWIENIAMI (E-COMMERCE)
 
 
@@ -142,11 +144,15 @@ https://ecommerce-orders-api-patryk-cchzfebpbhfkcub2.westeurope-01.azurewebsites
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Wykorzystane usługi Azure
-Projekt wykorzystuje następujące usługi chmurowe:
-- Azure App Service,
-- GitHub Actions (CI/CD pipeline).
 
-Po każdym pushu do gałęzi master pipeline:
-1. Buduje projekt ASP.NET Core,
-2. Publikuje aplikację,
-3. Automatycznie wdraża ją do Azure App Service.
+Projekt wykorzystuje następujące usługi chmurowe:
+
+- Azure App Service
+- GitHub Actions (CI/CD pipeline)
+
+Po każdym pushu do gałęzi MASTER pipeline:
+1. Buduje projekt ASP.NET Core
+2. Publikuje aplikację
+3. Automatycznie wdraża ją do Azure App Service
+
+Dodatkowo w repozytorium znajduje się definicja infrastruktury jako kodu w technologii Bicep.

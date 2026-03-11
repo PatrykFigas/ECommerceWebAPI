@@ -3,7 +3,7 @@ name: Build and deploy ASP.NET Core API to Azure Web App
 on:
   push:
     branches:
-      - master
+      - feature/bicep-infrastructure
 
 env:
   AZURE_WEBAPP_NAME: ecommerce-orders-api-patryk
@@ -31,6 +31,18 @@ jobs:
 
       - name: Publish
         run: dotnet publish WebAPI.csproj --configuration Release --no-build --output ${{ env.PUBLISH_PATH }}
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy Azure infrastructure (Bicep)
+        run: |
+          az deployment group create \
+            --resource-group rg-ecommerce-api \
+            --template-file infra/main.bicep \
+            --parameters infra/inframain.parameters.json
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
