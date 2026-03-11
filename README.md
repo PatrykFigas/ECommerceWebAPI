@@ -1,3 +1,5 @@
+![Build and Deploy](https://github.com/PatrykFigas/ECommerceWebAPI/actions/workflows/ci.yml/badge.svg)
+
 WebAPI – Zarządzanie zamówieniami (E-commerce)
 
 Projekt Web API w technologii ASP.Net Core, umożliwiający zarządzanie produktami oraz zamówieniami w systemie e-commerce.
@@ -119,4 +121,4 @@ Po każdym pushu do gałęzi MASTER GitHub Actions:
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Projekt wykonany jako zadanie rekrutacyjne.
+
